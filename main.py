@@ -16,6 +16,7 @@ with open('home.html', 'r') as html_file:
 
         #we can also put these in another variable and print those variables for example:
         courseHeading = cards.h5.text
-        coursePrice = cards.a.text
+        coursePrice = cards.a.text.split()[-1]
         print(courseHeading)
         print(coursePrice)
+        print(f'{courseHeading} costs {coursePrice}')

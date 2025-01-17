@@ -11,8 +11,11 @@ with open('home.html', 'r') as html_file:
 
     coursesCards = soup.find_all('div', class_='card')
     for cards in coursesCards:
-        print(cards.h5.text)
-        print(cards.a.text)
-        
+        # print(cards.h5.text)
+        # print(cards.a.text)
+
         #we can also put these in another variable and print those variables for example:
-        
+        courseHeading = cards.h5.text
+        coursePrice = cards.a.text
+        print(courseHeading)
+        print(coursePrice)
